@@ -1,0 +1,12 @@
+name = "saleor-app-hono-pages-template"
+compatibility_date = "2025-01-03"
+pages_build_output_dir = "./dist"
+compatibility_flags = [ "nodejs_compat" ]
+assets = {directory = "public"}
+
+[[kv_namespaces]]
+binding = "saleor_app_apl"
+id = "7cf879f27e024a30ab3b6c77cd633006"
+
+[vars]
+APL = "cloudflare-kv"
