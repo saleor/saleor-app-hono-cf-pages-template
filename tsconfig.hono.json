@@ -17,6 +17,9 @@
     "jsxImportSource": "hono/jsx"
   },
   "include": [
-    "src/api"
-  ]
+    "src"
+  ],
+  "exclude": [
+    "src/client"
+  ],
 }
