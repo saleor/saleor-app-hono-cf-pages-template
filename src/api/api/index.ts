@@ -1,6 +1,6 @@
 import { createAppRegisterHandler, createManifestHandler } from "@saleor/app-sdk/handlers/fetch-api";
 import { Context, Hono } from "hono";
-import packageJson from "../../package.json";
+import packageJson from "../../../package.json";
 import { getApl } from "../saleor-app";
 import { Bindings } from "../bindings";
 import webhookRotues from "./webhooks";

@@ -11,13 +11,18 @@
   },
   "dependencies": {
     "@saleor/app-sdk": "0.0.0-pr-20250103130801",
-    "hono": "^4.6.15"
+    "@vitejs/plugin-react": "^4.3.4",
+    "hono": "^4.6.15",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241218.0",
     "@hono/vite-build": "^1.2.0",
     "@hono/vite-cloudflare-pages": "^0.4.2",
     "@hono/vite-dev-server": "^0.17.0",
+    "@types/react": "^19.0.3",
+    "@types/react-dom": "^19.0.2",
     "prettier": "^3.4.2",
     "vite": "^5.2.12",
     "wrangler": "^3.96.0"

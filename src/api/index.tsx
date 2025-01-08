@@ -36,7 +36,7 @@ app.get("/app", c => {
         )}
       </head>
       <body>
-        <div id="main"></div>
+        <div id="root"></div>
       </body>
     </html>
   )
