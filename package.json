@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --mode client && vite build",
-    "preview": "wrangler pages dev",
+    "preview": "wrangler pages dev --port=3000",
     "deploy": "pnpm run build && wrangler pages deploy",
     "format": "prettier --write ."
   },

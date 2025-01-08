@@ -28,6 +28,9 @@ export default defineConfig(({ mode }) => {
         }),
         pages(),
       ],
+      server: {
+        port: 3000,
+      }
     }
   }
 })
