@@ -1,11 +1,8 @@
 import { Hono } from 'hono'
-import { renderer } from './renderer'
 import apiRoutes from "./api";
 import { Bindings } from './bindings';
 
 const app = new Hono<{ Bindings: Bindings }>();
-
-app.use(renderer)
 
 const getBaseUrl = (url: string) => {
   const parsedUrl = new URL(url);
@@ -44,10 +41,14 @@ app.get("/app", c => {
 
 app.notFound((c) => {
   return c.html(
-    <main>
-      <h1>Not found</h1>
-      <p>Requested page was not found</p>
-    </main>,
+    <html>
+      <body>
+        <main>
+          <h1>Not found</h1>
+          <p>Requested page was not found</p>
+        </main>
+      </body>
+    </html>
   );
 });
 

@@ -1,4 +1,4 @@
-import { Context, Hono } from "hono";
+import { Hono } from "hono";
 import { Bindings } from "../../bindings";
 import { getOrderCreatedWebhook } from "./order-created";
 

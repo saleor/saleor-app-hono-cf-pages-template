@@ -13,7 +13,9 @@ app.get("/manifest", c => createManifestHandler({
       name: 'Saleor App Template',
       tokenTargetUrl: `${appBaseUrl}/api/register`,
       appUrl: `${appBaseUrl}/app`,
-      permissions: [],
+      permissions: [
+        "MANAGE_ORDERS",
+      ],
       id: "saleor.app.hono",
       version: packageJson.version,
       webhooks: [
