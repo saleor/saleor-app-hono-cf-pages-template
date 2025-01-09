@@ -14,9 +14,16 @@
       "vite/client"
     ],
     "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx"
+    "jsxImportSource": "hono/jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/generated": [
+        "generated"
+      ]
+    }
   },
   "include": [
-    "src"
+    "src",
+    "generated"
   ]
 }

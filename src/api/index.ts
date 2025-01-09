@@ -1,21 +1,13 @@
 import { createAppRegisterHandler, createManifestHandler } from "@saleor/app-sdk/handlers/fetch-api";
-import { Context, Hono } from "hono";
+import { Hono } from "hono";
 import packageJson from "../../package.json";
 import { getApl } from "../saleor-app";
 import { Bindings } from "../bindings";
 import webhookRotues from "./webhooks";
+import { getOrderCreatedWebhook } from "./webhooks/order-created";
 
 const app = new Hono<{ Bindings: Bindings }>();
-
-// Web API Request is wrapped in hono's context object
-// Saleor app-sdk accepts only raw Request object
-const createRawRequestHandler = (handler: (req: Request) => Response | Promise<Response>) => {
-  return (context: Context) => {
-    return handler(context.req.raw);
-  }
-}
-
-app.get("/manifest", createRawRequestHandler(createManifestHandler({
+app.get("/manifest", c => createManifestHandler({
   async manifestFactory({ appBaseUrl }) {
     return {
       name: 'Saleor App Template',
@@ -24,12 +16,14 @@ app.get("/manifest", createRawRequestHandler(createManifestHandler({
       permissions: [],
       id: "saleor.app.hono",
       version: packageJson.version,
-      webhooks: [],
+      webhooks: [
+        getOrderCreatedWebhook(c).getWebhookManifest(appBaseUrl)
+      ],
       extensions: [],
       author: "Jonatan Witoszek",
     }
   }
-})));
+})(c.req.raw));
 
 app.post("/register", c => createAppRegisterHandler({
   apl: getApl(c),

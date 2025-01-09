@@ -7,17 +7,34 @@
     "build": "vite build --mode client && vite build",
     "preview": "wrangler pages dev --port=3000",
     "deploy": "pnpm run build && wrangler pages deploy",
+    "fetch-schema": "curl https://raw.githubusercontent.com/saleor/saleor/${npm_package_saleor_schemaVersion}/saleor/graphql/schema.graphql > graphql/schema.graphql",
+    "generate": "graphql-codegen",
     "format": "prettier --write ."
   },
+  "saleor": {
+    "schemaVersion": "3.20"
+  },
   "dependencies": {
-    "@saleor/app-sdk": "0.0.0-pr-20250103130801",
+    "@saleor/app-sdk": "0.0.0-pr-20250109150409",
     "@vitejs/plugin-react": "^4.3.4",
+    "graphql": "^16.10.0",
+    "graphql-tag": "^2.12.6",
     "hono": "^4.6.15",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "urql": "^4.2.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241218.0",
+    "@graphql-codegen/cli": "3.3.1",
+    "@graphql-codegen/introspection": "3.0.1",
+    "@graphql-codegen/schema-ast": "^3.0.1",
+    "@graphql-codegen/typed-document-node": "4.0.1",
+    "@graphql-codegen/typescript": "3.0.4",
+    "@graphql-codegen/typescript-operations": "3.0.4",
+    "@graphql-codegen/typescript-urql": "^3.7.3",
+    "@graphql-codegen/urql-introspection": "2.2.1",
+    "@graphql-typed-document-node/core": "^3.2.0",
     "@hono/vite-build": "^1.2.0",
     "@hono/vite-cloudflare-pages": "^0.4.2",
     "@hono/vite-dev-server": "^0.17.0",
