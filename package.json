@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@saleor/app-sdk": "1.5.0",
-    "@vitejs/plugin-react": "4.7.0",
+    "@vitejs/plugin-react": "5.1.2",
     "graphql": "^16.10.0",
     "graphql-tag": "^2.12.6",
     "hono": "4.10.8",
@@ -42,7 +42,7 @@
     "@types/react": "^19.0.3",
     "@types/react-dom": "^19.0.2",
     "prettier": "^3.4.2",
-    "vite": "5.4.21",
-    "wrangler": "3.114.15"
+    "vite": "6.4.1",
+    "wrangler": "4.54.0"
   }
 }
