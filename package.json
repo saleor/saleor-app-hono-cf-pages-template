@@ -9,13 +9,14 @@
     "deploy": "pnpm run build && wrangler pages deploy",
     "fetch-schema": "curl https://raw.githubusercontent.com/saleor/saleor/${npm_package_saleor_schemaVersion}/saleor/graphql/schema.graphql > graphql/schema.graphql",
     "generate": "graphql-codegen",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "check-types": "tsc -b --noEmit"
   },
   "saleor": {
     "schemaVersion": "3.20"
   },
   "dependencies": {
-    "@saleor/app-sdk": "0.0.0-pr-20250109150409",
+    "@saleor/app-sdk": "1.5.0",
     "@vitejs/plugin-react": "^4.3.4",
     "graphql": "^16.10.0",
     "graphql-tag": "^2.12.6",
