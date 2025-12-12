@@ -8,11 +8,11 @@ import { Bindings } from "./bindings";
 import { CloudflareKvApl } from "./cloudflare-kv-apl";
 
 /**
- * By default auth data are stored in the `.auth-data.json` (FileAPL).
- * For multi-tenant applications and deployments please use UpstashAPL.
+ * APL (Auth Persistence Layer) stores authentication tokens per Saleor instance.
+ * This project supports CloudflareKvApl (recommended) or UpstashAPL.
  *
- * To read more about storing auth data, read the
- * [APL documentation](https://github.com/saleor/saleor-app-sdk/blob/main/docs/apl.md)
+ * To read more about APL, see:
+ * https://docs.saleor.io/developer/extending/apps/architecture/apl
  */
 export const getApl = (c: Context): APL => {
   const { APL, saleor_app_apl } = env<Bindings>(c);
