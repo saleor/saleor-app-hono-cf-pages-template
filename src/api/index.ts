@@ -22,7 +22,7 @@ app.get("/manifest", c => createManifestHandler({
         getOrderCreatedWebhook(c).getWebhookManifest(appBaseUrl)
       ],
       extensions: [],
-      author: "Jonatan Witoszek",
+      author: "Saleor Commerce",
     }
   }
 })(c.req.raw));
