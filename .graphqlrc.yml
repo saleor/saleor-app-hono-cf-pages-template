@@ -13,9 +13,6 @@ extensions:
           - typescript
           - typescript-operations
           - urql-introspection
-          - typescript-urql:
-              documentVariablePrefix: "Untyped"
-              fragmentVariablePrefix: "Untyped"
           - typed-document-node
       generated/schema.graphql:
         plugins:
