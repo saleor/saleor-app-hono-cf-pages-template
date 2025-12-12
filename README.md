@@ -2,9 +2,6 @@
 
 A lightweight Saleor app template leveraging Hono's ultrafast routing capabilities (under 14kB) and Cloudflare Pages for deployment.
 
-> [!CAUTION]
-> This example uses unreleased features of `@saleor/app-sdk`
-
 ## Demo
 
 Experience the live demo at: https://saleor-app-hono-pages-template.pages.dev/
@@ -73,7 +70,7 @@ id = "YOUR_KV_ID"
 - It's safe to commit KV namespace IDs to your repository
 - For sensitive data like API keys, use Cloudflare secrets instead of storing them in `wrangler.toml`
 
-## Clouflare KV APL
+## Cloudflare KV APL
 
 This project implements a custom [APL (Auth Persistence Layer)](https://docs.saleor.io/developer/extending/apps/architecture/apl) that stores and retrieves app data from Cloudflare KV. The APL handles:
 
