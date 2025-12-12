@@ -1,7 +1,8 @@
 import { env } from "hono/adapter";
 
 import { SaleorApp } from "@saleor/app-sdk/saleor-app";
-import { APL, UpstashAPL } from "@saleor/app-sdk/APL";
+import type { APL } from "@saleor/app-sdk/APL";
+import { UpstashAPL } from "@saleor/app-sdk/APL/upstash";
 import { Context } from "hono";
 import { Bindings } from "./bindings";
 import { CloudflareKvApl } from "./cloudflare-kv-apl";
