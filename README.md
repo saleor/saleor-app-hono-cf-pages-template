@@ -2,9 +2,6 @@
 
 A lightweight Saleor app template leveraging Hono's ultrafast routing capabilities (under 14kB) and Cloudflare Pages for deployment.
 
-> [!CAUTION]
-> This example uses unreleased features of `@saleor/app-sdk`
-
 ## Demo
 
 Experience the live demo at: https://saleor-app-hono-pages-template.pages.dev/
